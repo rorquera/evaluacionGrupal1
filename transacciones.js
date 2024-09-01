@@ -17,14 +17,13 @@ cargar=function(){
 */
 buscarCuenta=function(numeroCuenta){
     let resultado;
-    for(let i=0; i<cuentas.length;i++){
+    for(let i = 0; i < cuentas.length; i++){
         resultado=cuentas[i];
         if(resultado.numeroCuenta==numeroCuenta){
             return resultado;
-        }else{
-            return null
         }
     }
+    return null
 }
 
 ejecutarBusqueda=function(){
@@ -36,9 +35,11 @@ ejecutarBusqueda=function(){
         mostrarTexto("txtCedula",cuentaEncontrada.cedula);
         mostrarTexto("txtNumeroCuenta" ,cuentaEncontrada.numeroCuenta);
         mostrarTexto("txtSaldo" ,cuentaEncontrada.saldo);
+        habilitarComponente("btnDepositar");
+        habilitarComponente("btnRetirar");
 
     }else{
-        alert("NO EXISTE EL USUARIO")
+        alert("CUENTA INEXISTENTE")
     }
     //toma el numero de cuenta de la caja de texto
     //invoca a buscarCuenta y guarda el resultado en una variable
