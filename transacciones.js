@@ -71,10 +71,24 @@ ejecutarDeposito=function(){
 
 
 retirar=function(numeroCuenta,monto){
-    let cuentaAfectada;
+    let cuentaAfectada=buscarCuenta(numeroCuenta);
     //invoca a buscarCuenta, guarda el resultado en la variable cuentaAfectada;
+    if(cuentaAfectada.saldo>monto){
+        cuentaAfectada.saldo-=monto
+        mostrarTexto("txtSaldo",cuentaAfectada.saldo);
+        alert("TRANSACCION EXITOSA");
+    }else{
+        alert("SALDO INSUFICIENTE");
+    }
     //Valida si la cuenta tiene el saldo suficiente para retirar el monto
     //Si el saldo es suficiente,al saldo actual de la cuenta afectada, le resta el monto que recibe como parámetro
     //Si el saldo no es suficiente, muestra un alert SALDO INSUFICIENTE
     //Si logra retirar muestra un mensaje TRANSACCION EXITOSA y muestra en pantalla el nuevo saldo de la cuenta
+}
+
+ejecurtaRetirar= function(){
+    let valorNumeroCuenta= recuperarTexto("txtBusquedaCedula");
+    let valorIngresado= recuperarFloat("valorIngresado");
+    retirar(valorNumeroCuenta,valorIngresado);
+    
 }
