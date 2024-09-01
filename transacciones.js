@@ -39,7 +39,7 @@ ejecutarBusqueda=function(){
         habilitarComponente("btnRetirar");
 
     }else{
-        alert("CUENTA INEXISTENTE")
+        alert("CUENTA INEXISTENTE");
     }
     //toma el numero de cuenta de la caja de texto
     //invoca a buscarCuenta y guarda el resultado en una variable
@@ -47,24 +47,28 @@ ejecutarBusqueda=function(){
 }
 
 depositar=function(numeroCuenta,monto){
-    let cuentaAfectada;
+    let cuentaAfectada= buscarCuenta(numeroCuenta);
+    let resultaSuma=cuentaAfectada.saldo+monto;
+    cuentaAfectada.saldo+=resultaSuma
+    return resultaSuma
     //invoca a buscarCuenta, guarda el resultado en la variable cuentaAfectada;
     //Al saldo actual de la cuenta afectada, le suma el monto que recibe como parámetro
 }
 
 ejecutarDeposito=function(){
     //Toma el numero de cuenta ingresado en la caja de texto
+    let valorCuenta=recuperarTexto("txtBusquedaCedula");
     //Toma el monto ingresado en la caja de texto
+    let valorMonto=recuperarFloat("valorIngresado");
     //invoca a depositar
+    let resultado=depositar(valorCuenta,valorMonto);
     //Muestra un mensaje TRANSACCION EXITOSA
+    alert("TRANSACCION EXITOSA")
     //Muestra en pantalla el nuevo saldo de la cuenta
+    mostrarTexto("txtSaldo", resultado);
 }
 
-depositar=function(numeroCuenta,monto){
-    let cuentaAfectada;
-    //invoca a buscarCuenta, guarda el resultado en la variable cuentaAfectada;
-    //Al saldo actual de la cuenta afectada, le suma el monto que recibe como parámetro
-}
+
 
 retirar=function(numeroCuenta,monto){
     let cuentaAfectada;
