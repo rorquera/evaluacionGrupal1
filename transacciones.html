@@ -59,13 +59,13 @@
             <div class="superior">
                 <div class="titulo">TRANSACCIONES</div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">CAMPO 1</div>
+                    <div class="etiquetaTexto">Cuenta</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" />
+                        <input type="text" class="caja" id="txtBusquedaCedula"/>
                     </div>
                 </div>
                 <div class="contenedorAcciones">
-                    <input type="button" value="BUSCAR" />
+                    <input type="button" value="BUSCAR" onclick="ejecutarBusqueda();" />
                 </div>
                 <div class="contenedorTexto">
                     <div class="etiquetaTexto">CAMPO 2</div>
@@ -74,12 +74,32 @@
                     </div>
                 </div>
                 <div class="contenedorAcciones">
-                    <input type="button" value="DEPOSITAR" />
-                    <input type="button" value="RETIRAR" />
-                    
+                    <input type="button" value="DEPOSITAR" id="btnDepositar" />
+                    <input type="button" value="RETIRAR" id="btnRetirar"/>   
                 </div>
-              
-            </div>
+                
+                <div class="datos">
+                    <div class="campo">
+                        <div class="etiqueta">Nombre:</div>
+                        <div id="txtNombre" class="texto"></div>
+                    </div>
+                    <div class="campo">
+                        <div class="etiqueta">Apellido:</div>
+                        <div id="txtApellido" class="texto"></div>
+                    </div>
+                    <div class="campo">
+                        <div class="etiqueta">Cedula:</div>
+                        <div id="txtCedula" class="texto"></div>
+                    </div>
+                    <div class="campo">
+                        <div class="etiqueta">Cuenta:</div>
+                        <div id="txtNumeroCuenta" class="texto"></div>
+                    </div>
+                    <div class="campo">
+                        <div class="etiqueta">Saldo:</div>
+                        <div id="txtSaldo" class="texto"></div>
+                    </div>
+                </div>
         </div>
         <div class="contenido" id="divMovimientos">
           

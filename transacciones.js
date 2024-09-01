@@ -7,7 +7,8 @@ cargar=function(){
     mostrarComponente("divTransacciones");
     ocultarComponente("divCuentas");
     ocultarComponente("divMovimientos");
-    
+    deshabilitarComponente("btnDepositar");
+    deshabilitarComponente("btnRetirar");
 }
 
 /*
@@ -15,10 +16,30 @@ cargar=function(){
     si existe retorna el objeto cuenta, caso contrario retorna null. 
 */
 buscarCuenta=function(numeroCuenta){
-
+    let resultado;
+    for(let i=0; i<cuentas.length;i++){
+        resultado=cuentas[i];
+        if(resultado.numeroCuenta==numeroCuenta){
+            return resultado;
+        }else{
+            return null
+        }
+    }
 }
 
 ejecutarBusqueda=function(){
+    let valorNumeroCuenta= recuperarTexto("txtBusquedaCedula");
+    let cuentaEncontrada= buscarCuenta(valorNumeroCuenta);
+    if(cuentaEncontrada!=null){
+        mostrarTexto("txtNombre",cuentaEncontrada.nombre);
+        mostrarTexto("txtApellido",cuentaEncontrada.apellido);
+        mostrarTexto("txtCedula",cuentaEncontrada.cedula);
+        mostrarTexto("txtNumeroCuenta" ,cuentaEncontrada.numeroCuenta);
+        mostrarTexto("txtSaldo" ,cuentaEncontrada.saldo);
+
+    }else{
+        alert("NO EXISTE EL USUARIO")
+    }
     //toma el numero de cuenta de la caja de texto
     //invoca a buscarCuenta y guarda el resultado en una variable
     //Si el resultado es diferente de null, muestra en pantalla, caso contrario muestra un alert
