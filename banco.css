@@ -93,3 +93,20 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.datos {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    margin: 10px;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.etiqueta {
+    font-weight: bold;
+    margin-right: 5px;
+}
