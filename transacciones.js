@@ -48,9 +48,8 @@ ejecutarBusqueda=function(){
 
 depositar=function(numeroCuenta,monto){
     let cuentaAfectada= buscarCuenta(numeroCuenta);
-    let resultaSuma=cuentaAfectada.saldo+monto;
-    cuentaAfectada.saldo+=resultaSuma
-    return resultaSuma
+    let resultadoSuma=cuentaAfectada.saldo+=monto;
+    return resultadoSuma
     //invoca a buscarCuenta, guarda el resultado en la variable cuentaAfectada;
     //Al saldo actual de la cuenta afectada, le suma el monto que recibe como parámetro
 }
