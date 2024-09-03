@@ -14,7 +14,7 @@ mostrarCuentas=function(){
     let tabla="<table><tr><th>NUMERO CUENTA </th>"+
     "<th>NOMBRE</th><th>SALDO</th>";
     let infoCuenta;
-    let tablaHtml=document.getElementById("inferior");
+    let tablaHtml=document.getElementById("TABLA");
     for(let i=0;i<cuentas.length;i++){
         infoCuenta=cuentas[i];
         tabla+="<tr><td>"+infoCuenta.numeroCuenta+"</td>";
