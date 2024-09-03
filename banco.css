@@ -1,112 +1,307 @@
-body{
-   
-}
-.principal{
-    display: flex;
-    
-}
-.menu{
-    display: flex;
-    flex:1;
-   
-    flex-direction: column;
-    align-items: center;
-    height: 500px;
-    
-}
-.contenido{
-    display: flex;
-    flex:5;
-   
-    align-items: center;
-    flex-direction: column;
-}
-.contenedorLogo{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-}
-.contenedorInfoGrupo{
-    display: flex;
-    flex: 1;
-   
-    flex-direction: column;
+body {
+  background-color: whitesmoke;
 }
 
-
-.contenedorBotones{
-    display: flex;
-    flex:4;
-    flex-direction: column;
-    justify-content: center;
-}
-.boton{
-    margin-top: 10px;
-}
-.contenedorTexto{
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    flex:1;
-
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  
-}
-.contenedorAcciones{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex:1;
-}
-.etiquetaTexto{
-    display: flex;
-    flex:1;
-    justify-content: flex-end;
-    margin-right: 10px;
-
+.principal {
+  display: flex;
 }
 
-.cajaTexto{
-    display: flex;
-    flex:1;
-    justify-content: flex-start;
+.menu {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
 }
-.superior{
-    margin-top: 40px;
-    display: flex;
-    flex:1;
-    flex-direction: column;
+
+.contenido {
+  display: flex;
+  flex: 5;
+  align-items: center;
+  flex-direction: column;
 }
-.inferior{
-    display: flex;
-    flex:1;
-    justify-content: center;
-    margin-top: 30px;
+
+.contenedorLogo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
 }
-.titulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.contenedorInfoGrupo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.contenedorBotones {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boton {
+  margin-top: 10px;
+}
+
+.contenedorTexto {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contenedorAcciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.etiquetaTexto {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.cajaTexto {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.superior {
+  margin-top: 40px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.inferior {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .datos {
-    font-family: Arial, sans-serif;
-    max-width: 400px;
-    margin: 0 auto;
-    margin: 10px;
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  margin: 10px;
 }
 
 .campo {
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .etiqueta {
-    font-weight: bold;
-    margin-right: 5px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  border-style: solid;
+  border-color: rgb(113, 142, 216);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(113, 142, 216);
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+th {
+  padding: 15px 20px 15px 20px;
+  background-color: rgb(33, 72, 169);
+  color: white;
+  text-align: left;
+}
+
+td {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  padding: 8px 20px 8px 20px;
+}
+
+input {
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 15px;
+  padding: 5px;
+}
+
+input[type='text'] {
+  border-color: gainsboro;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:hover {
+  border-color: #007bff;
+}
+
+input[type='text']:focus {
+  outline: 0px solid #007bff;
+  border-color: #007bff;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(128, 207, 252, 1);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(128, 207, 252, 1);
+  box-shadow: 0px 0px 10px 2px rgba(128, 207, 252, 1);
+}
+
+input[type='button'] {
+  margin-top: 15px;
+  background-color: white;
+  padding: 7px 15px 7px 15px;
+  margin-right: 5px;
+}
+
+input[type='button']:disabled {
+  background-color: lightgray;
+  border-color: lightgray;
+  color: gray;
+}
+
+input[type='button']:hover:disabled {
+  background-color: lightgray;
+  border-color: lightgray;
+  color: gray;
+  cursor: auto;
+}
+
+input[type='button']:active:disabled {
+  background-color: lightgray;
+  border-color: lightgray;
+  color: gray;
+}
+
+input[type='button']:focus:disabled {
+  outline: 0px solid lightgray;
+}
+
+/*BOTON AZUL*/
+.btn-azul {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-azul:hover {
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-azul:active {
+  background-color: white;
+  color: #007bff;
+  transition: all 0.5s;
+}
+
+.btn-azul:focus {
+  outline: 0px solid #007bff;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(128, 207, 252, 1);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(128, 207, 252, 1);
+  box-shadow: 0px 0px 10px 2px rgba(128, 207, 252, 1);
+}
+
+/*BOTON VERDE*/
+.btn-verde {
+  border-color: #28be11;
+  color: #28be11;
+}
+
+.btn-verde:hover {
+  background-color: #28be11;
+  transition: background-color 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-verde:active {
+  background-color: white;
+  color: #28be11;
+  transition: all 0.5s;
+}
+
+.btn-verde:focus {
+  outline: 0px solid #28be11;
+  -webkit-box-shadow: 0px 0px 10px 2px rgb(96, 251, 76);
+  -moz-box-shadow: 0px 0px 10px 2px rgb(96, 251, 76);
+  box-shadow: 0px 0px 10px 2px rgb(96, 251, 76);
+}
+
+/*BOTON ROJO*/
+.btn-rojo {
+  border-color: #bb0a24;
+  color: #bb0a24;
+}
+
+.btn-rojo:hover {
+  background-color: #bb0a24;
+  transition: background-color 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-rojo:active {
+  background-color: white;
+  color: #bb0a24;
+  transition: all 0.5s;
+}
+
+.btn-rojo:focus {
+  outline: 0px solid #bb0a24;
+  -webkit-box-shadow: 0px 0px 10px 2px rgb(252, 128, 128);
+  -moz-box-shadow: 0px 0px 10px 2px rgb(252, 128, 128);
+  box-shadow: 0px 0px 10px 2px rgb(252, 128, 128);
+}
+
+/*BOTON GRIS*/
+.btn-gris {
+  border-color: rgb(33, 72, 169);
+  color: rgb(33, 72, 169);
+}
+
+.btn-gris:hover {
+  background-color: rgb(33, 72, 169);
+  transition: background-color 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-gris:active {
+  background-color: white;
+  color: rgb(33, 72, 169);
+  transition: all 0.5s;
+}
+
+.btn-gris:focus {
+  outline: 0px solid rgb(33, 72, 169);
+  -webkit-box-shadow: 0px 0px 10px 2px rgb(60, 120, 230);
+  -moz-box-shadow: 0px 0px 10px 2px rgb(60, 120, 230);
+  box-shadow: 0px 0px 10px 2px rgb(60, 120, 230);
+}
+
+p {
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
