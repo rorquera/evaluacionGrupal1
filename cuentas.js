@@ -36,7 +36,15 @@ mostrarCuentas=function(){
     si existe retorna el objeto cuenta, caso contrario retorna null. 
 */
 buscarCuenta=function(numeroCuenta){
-
+    let cuentaExistente;
+    let existeCuenta=null;
+    for(let i=0;i<cuentas.length;i++){
+        cuentaExistente=cuentas[i];
+        if(cuentaExistente.numeroCuenta==numeroCuenta){
+            existeCuenta=cuentaExistente;
+            break;
+        }
+    }return existeCuenta;
 }
 
 /*
